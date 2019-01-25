@@ -1,6 +1,6 @@
-#Test Inov Data
+# Test Inov Data
 
-##Initialisation of the projet
+## Initialisation of the projet
 
 - Creation of the symfony project
 
@@ -65,7 +65,7 @@ Can this field be null in the database (nullable) (yes/no) [no]:
 
 ```
 
-- [That's it! We've created our entity] (https://github.com/yuckon/inov_data/blob/master/src/Entity/Game.php)
+- [That's it! We've created our entity](https://github.com/yuckon/inov_data/blob/master/src/Entity/Game.php)
 
 - Now we will migrate our entity to create a table for it
 
