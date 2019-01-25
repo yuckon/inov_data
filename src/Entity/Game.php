@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Game
 {
+  // This is our colums define in SQL Server
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -25,6 +26,8 @@ class Game
      * @ORM\Column(type="date")
      */
     private $date;
+
+    // Getter & Setter
 
     public function getId(): ?int
     {

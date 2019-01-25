@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Game;
 
 class GameController extends AbstractController
@@ -13,21 +14,16 @@ class GameController extends AbstractController
      */
     public function index()
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/GameController.php',
-        ]);
-
         $entityManager = $this->getDoctrine()->getManager();
 
         $game = new Game();
-        $game = setName('Ghost Recon');
-        $game = setDate('12-01-2018');
+        $game->setName('Ghost Recon');
+        $game->setDate(\DateTime::createFromFormat('Y-m-d',"2001-08-15"));
 
         $entityManager->persist($game);
 
         $entityManager->flush();
 
-        return new Reponse('Nouveau Jeu !' .$game->getId());
+        return new Response('Nouveau Jeu !' .$game->getId());
     }
 }
